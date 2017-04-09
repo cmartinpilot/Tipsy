@@ -7,23 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300DA7991E995BDA0063C8BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300DA7981E995BDA0063C8BA /* Assets.xcassets */; };
+		300DA79B1E995BF90063C8BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA79A1E995BF90063C8BA /* ViewController.swift */; };
+		300DA79F1E99CCFA0063C8BA /* ServiceTipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA79D1E99CCFA0063C8BA /* ServiceTipButton.swift */; };
+		300DA7A01E99CCFA0063C8BA /* TextTipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA79E1E99CCFA0063C8BA /* TextTipButton.swift */; };
+		300DA7A31E99CD970063C8BA /* RectScoreboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A11E99CD970063C8BA /* RectScoreboardButton.swift */; };
+		300DA7A41E99CD970063C8BA /* RectTextTipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A21E99CD970063C8BA /* RectTextTipButton.swift */; };
+		300DA7A61E99CDC60063C8BA /* DiamondScoreboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A51E99CDC60063C8BA /* DiamondScoreboardButton.swift */; };
+		300DA7AC1E99CDE50063C8BA /* AmountTipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A71E99CDE50063C8BA /* AmountTipButton.swift */; };
+		300DA7AD1E99CDE50063C8BA /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A81E99CDE50063C8BA /* LocationButton.swift */; };
+		300DA7AE1E99CDE50063C8BA /* TailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7A91E99CDE50063C8BA /* TailButton.swift */; };
+		300DA7AF1E99CDE50063C8BA /* TailScoreboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7AA1E99CDE50063C8BA /* TailScoreboardButton.swift */; };
+		300DA7B01E99CDE50063C8BA /* TimeScoreboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DA7AB1E99CDE50063C8BA /* TimeScoreboardButton.swift */; };
 		3018560A1E994B9E00F961EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856091E994B9E00F961EF /* AppDelegate.swift */; };
-		3018560C1E994B9E00F961EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018560B1E994B9E00F961EF /* ViewController.swift */; };
-		3018560F1E994B9E00F961EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3018560D1E994B9E00F961EF /* Main.storyboard */; };
 		301856121E994B9E00F961EF /* Tipsy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 301856101E994B9E00F961EF /* Tipsy.xcdatamodeld */; };
-		301856141E994B9E00F961EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301856131E994B9E00F961EF /* Assets.xcassets */; };
 		301856171E994B9E00F961EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301856151E994B9E00F961EF /* LaunchScreen.storyboard */; };
+		301856231E995ADD00F961EF /* ButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018561E1E995ADD00F961EF /* ButtonManager.swift */; };
+		301856241E995ADD00F961EF /* ScoreboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3018561F1E995ADD00F961EF /* ScoreboardButton.swift */; };
+		301856251E995ADD00F961EF /* ScoreboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856201E995ADD00F961EF /* ScoreboardManager.swift */; };
+		301856261E995ADD00F961EF /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856211E995ADD00F961EF /* ShapeView.swift */; };
+		301856271E995ADD00F961EF /* TipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856221E995ADD00F961EF /* TipButton.swift */; };
+		301856291E995B2000F961EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301856281E995B2000F961EF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300DA7981E995BDA0063C8BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		300DA79A1E995BF90063C8BA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		300DA79D1E99CCFA0063C8BA /* ServiceTipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceTipButton.swift; sourceTree = "<group>"; };
+		300DA79E1E99CCFA0063C8BA /* TextTipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTipButton.swift; sourceTree = "<group>"; };
+		300DA7A11E99CD970063C8BA /* RectScoreboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectScoreboardButton.swift; sourceTree = "<group>"; };
+		300DA7A21E99CD970063C8BA /* RectTextTipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectTextTipButton.swift; sourceTree = "<group>"; };
+		300DA7A51E99CDC60063C8BA /* DiamondScoreboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiamondScoreboardButton.swift; sourceTree = "<group>"; };
+		300DA7A71E99CDE50063C8BA /* AmountTipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountTipButton.swift; sourceTree = "<group>"; };
+		300DA7A81E99CDE50063C8BA /* LocationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
+		300DA7A91E99CDE50063C8BA /* TailButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TailButton.swift; sourceTree = "<group>"; };
+		300DA7AA1E99CDE50063C8BA /* TailScoreboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TailScoreboardButton.swift; sourceTree = "<group>"; };
+		300DA7AB1E99CDE50063C8BA /* TimeScoreboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeScoreboardButton.swift; sourceTree = "<group>"; };
+		300DA7B11E99CEE20063C8BA /* Antipasto_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Antipasto_regular.otf; sourceTree = "<group>"; };
 		301856061E994B9E00F961EF /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301856091E994B9E00F961EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3018560B1E994B9E00F961EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3018560E1E994B9E00F961EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301856111E994B9E00F961EF /* Tipsy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tipsy.xcdatamodel; sourceTree = "<group>"; };
-		301856131E994B9E00F961EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301856161E994B9E00F961EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301856181E994B9E00F961EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3018561E1E995ADD00F961EF /* ButtonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonManager.swift; sourceTree = "<group>"; };
+		3018561F1E995ADD00F961EF /* ScoreboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardButton.swift; sourceTree = "<group>"; };
+		301856201E995ADD00F961EF /* ScoreboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardManager.swift; sourceTree = "<group>"; };
+		301856211E995ADD00F961EF /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		301856221E995ADD00F961EF /* TipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipButton.swift; sourceTree = "<group>"; };
+		301856281E995B2000F961EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +87,29 @@
 		301856081E994B9E00F961EF /* Tipsy */ = {
 			isa = PBXGroup;
 			children = (
+				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
+				3018561F1E995ADD00F961EF /* ScoreboardButton.swift */,
+				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
+				301856211E995ADD00F961EF /* ShapeView.swift */,
+				300DA79D1E99CCFA0063C8BA /* ServiceTipButton.swift */,
+				300DA79E1E99CCFA0063C8BA /* TextTipButton.swift */,
+				300DA7A11E99CD970063C8BA /* RectScoreboardButton.swift */,
+				300DA7A51E99CDC60063C8BA /* DiamondScoreboardButton.swift */,
+				300DA7A71E99CDE50063C8BA /* AmountTipButton.swift */,
+				300DA7A81E99CDE50063C8BA /* LocationButton.swift */,
+				300DA7A91E99CDE50063C8BA /* TailButton.swift */,
+				300DA7AA1E99CDE50063C8BA /* TailScoreboardButton.swift */,
+				300DA7AB1E99CDE50063C8BA /* TimeScoreboardButton.swift */,
+				300DA7A21E99CD970063C8BA /* RectTextTipButton.swift */,
+				301856221E995ADD00F961EF /* TipButton.swift */,
 				301856091E994B9E00F961EF /* AppDelegate.swift */,
-				3018560B1E994B9E00F961EF /* ViewController.swift */,
-				3018560D1E994B9E00F961EF /* Main.storyboard */,
-				301856131E994B9E00F961EF /* Assets.xcassets */,
+				300DA79A1E995BF90063C8BA /* ViewController.swift */,
+				301856281E995B2000F961EF /* Main.storyboard */,
+				300DA7981E995BDA0063C8BA /* Assets.xcassets */,
 				301856151E994B9E00F961EF /* LaunchScreen.storyboard */,
 				301856181E994B9E00F961EF /* Info.plist */,
 				301856101E994B9E00F961EF /* Tipsy.xcdatamodeld */,
+				300DA7B11E99CEE20063C8BA /* Antipasto_regular.otf */,
 			);
 			path = Tipsy;
 			sourceTree = "<group>";
@@ -127,9 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301856291E995B2000F961EF /* Main.storyboard in Resources */,
+				300DA7991E995BDA0063C8BA /* Assets.xcassets in Resources */,
 				301856171E994B9E00F961EF /* LaunchScreen.storyboard in Resources */,
-				301856141E994B9E00F961EF /* Assets.xcassets in Resources */,
-				3018560F1E994B9E00F961EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,23 +187,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3018560C1E994B9E00F961EF /* ViewController.swift in Sources */,
+				300DA7AF1E99CDE50063C8BA /* TailScoreboardButton.swift in Sources */,
+				300DA7AD1E99CDE50063C8BA /* LocationButton.swift in Sources */,
+				300DA7AE1E99CDE50063C8BA /* TailButton.swift in Sources */,
+				300DA7A31E99CD970063C8BA /* RectScoreboardButton.swift in Sources */,
+				300DA7AC1E99CDE50063C8BA /* AmountTipButton.swift in Sources */,
+				300DA7A61E99CDC60063C8BA /* DiamondScoreboardButton.swift in Sources */,
+				300DA7B01E99CDE50063C8BA /* TimeScoreboardButton.swift in Sources */,
+				301856251E995ADD00F961EF /* ScoreboardManager.swift in Sources */,
+				301856231E995ADD00F961EF /* ButtonManager.swift in Sources */,
+				301856271E995ADD00F961EF /* TipButton.swift in Sources */,
 				3018560A1E994B9E00F961EF /* AppDelegate.swift in Sources */,
+				300DA79F1E99CCFA0063C8BA /* ServiceTipButton.swift in Sources */,
+				300DA7A41E99CD970063C8BA /* RectTextTipButton.swift in Sources */,
 				301856121E994B9E00F961EF /* Tipsy.xcdatamodeld in Sources */,
+				300DA7A01E99CCFA0063C8BA /* TextTipButton.swift in Sources */,
+				301856241E995ADD00F961EF /* ScoreboardButton.swift in Sources */,
+				300DA79B1E995BF90063C8BA /* ViewController.swift in Sources */,
+				301856261E995ADD00F961EF /* ShapeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3018560D1E994B9E00F961EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3018560E1E994B9E00F961EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		301856151E994B9E00F961EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,6 +362,7 @@
 				3018561D1E994B9E00F961EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
