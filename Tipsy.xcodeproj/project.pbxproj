@@ -68,6 +68,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300DA7B21E99D0320063C8BA /* Field Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				301856221E995ADD00F961EF /* TipButton.swift */,
+				300DA79D1E99CCFA0063C8BA /* ServiceTipButton.swift */,
+				300DA79E1E99CCFA0063C8BA /* TextTipButton.swift */,
+				300DA7A21E99CD970063C8BA /* RectTextTipButton.swift */,
+				300DA7A71E99CDE50063C8BA /* AmountTipButton.swift */,
+				300DA7A81E99CDE50063C8BA /* LocationButton.swift */,
+				300DA7A91E99CDE50063C8BA /* TailButton.swift */,
+			);
+			name = "Field Buttons";
+			sourceTree = "<group>";
+		};
+		300DA7B31E99D05B0063C8BA /* Scoreboard Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3018561F1E995ADD00F961EF /* ScoreboardButton.swift */,
+				300DA7A11E99CD970063C8BA /* RectScoreboardButton.swift */,
+				300DA7A51E99CDC60063C8BA /* DiamondScoreboardButton.swift */,
+				300DA7AA1E99CDE50063C8BA /* TailScoreboardButton.swift */,
+				300DA7AB1E99CDE50063C8BA /* TimeScoreboardButton.swift */,
+			);
+			name = "Scoreboard Buttons";
+			sourceTree = "<group>";
+		};
 		301855FD1E994B9E00F961EF = {
 			isa = PBXGroup;
 			children = (
@@ -87,21 +113,11 @@
 		301856081E994B9E00F961EF /* Tipsy */ = {
 			isa = PBXGroup;
 			children = (
-				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
-				3018561F1E995ADD00F961EF /* ScoreboardButton.swift */,
-				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
 				301856211E995ADD00F961EF /* ShapeView.swift */,
-				300DA79D1E99CCFA0063C8BA /* ServiceTipButton.swift */,
-				300DA79E1E99CCFA0063C8BA /* TextTipButton.swift */,
-				300DA7A11E99CD970063C8BA /* RectScoreboardButton.swift */,
-				300DA7A51E99CDC60063C8BA /* DiamondScoreboardButton.swift */,
-				300DA7A71E99CDE50063C8BA /* AmountTipButton.swift */,
-				300DA7A81E99CDE50063C8BA /* LocationButton.swift */,
-				300DA7A91E99CDE50063C8BA /* TailButton.swift */,
-				300DA7AA1E99CDE50063C8BA /* TailScoreboardButton.swift */,
-				300DA7AB1E99CDE50063C8BA /* TimeScoreboardButton.swift */,
-				300DA7A21E99CD970063C8BA /* RectTextTipButton.swift */,
-				301856221E995ADD00F961EF /* TipButton.swift */,
+				300DA7B31E99D05B0063C8BA /* Scoreboard Buttons */,
+				300DA7B21E99D0320063C8BA /* Field Buttons */,
+				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
+				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
 				301856091E994B9E00F961EF /* AppDelegate.swift */,
 				300DA79A1E995BF90063C8BA /* ViewController.swift */,
 				301856281E995B2000F961EF /* Main.storyboard */,
