@@ -21,7 +21,7 @@ open class TailScoreboardButton: ScoreboardButton {
     }
     
     func setupService(){
-        self.shapeType = .roundedRect
+        self.shape = .roundedRect
         self.backgroundViewImage = UIImage(named: "FakeTailNumber")
     }
 }

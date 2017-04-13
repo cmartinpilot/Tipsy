@@ -146,22 +146,22 @@ open class ButtonManager:TipButtonDelegate{
         //Amount button updated
         status.amountButtonOn = self.selectedAmountButton != nil
         status.amountText = self.selectedAmountButton?.text
-        status.amountButtonColor = self.selectedAmountButton?.shapeColor
+        status.amountButtonColor = self.selectedAmountButton?.color
     
         //Tail number button updated
         status.tailButtonOn = self.selectedTailButton != nil
         status.tailText = self.selectedTailButton?.text
-        status.tailButtonColor = self.selectedTailButton?.shapeColor
+        status.tailButtonColor = self.selectedTailButton?.color
         
         //Location button updated
         status.locationButtonOn = self.selectedLocationButton != nil
         status.locationText = self.selectedLocationButton?.text
-        status.locationButtonColor = self.selectedLocationButton?.shapeColor
+        status.locationButtonColor = self.selectedLocationButton?.color
         
         //Leg button updated
         status.legButtonOn = self.selectedLegButton != nil
         status.legText = self.selectedLegButton?.text
-        status.legButtonColor = self.selectedLegButton?.shapeColor
+        status.legButtonColor = self.selectedLegButton?.color
         
         return status
     }

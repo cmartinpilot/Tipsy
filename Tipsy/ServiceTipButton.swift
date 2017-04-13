@@ -27,15 +27,14 @@ open class ServiceTipButton: TipButton {
     //Initalizers
     init(backgroundColor:UIColor, image:UIImage?){
         super.init(frame: CGRect.zero)
-        self.shapeColor = backgroundColor
-        self.backgroundShape.color = self.shapeColor
+        self.color = backgroundColor
         let imageView = UIImageView(image: image)
         self.contentView = imageView
     }
     
     convenience init(backgroundColor:UIColor){
         self.init(backgroundColor:backgroundColor, image:nil)
-        self.backgroundShape.color = backgroundColor
+        self.color = backgroundColor
     }
     
     override public init(frame: CGRect) {

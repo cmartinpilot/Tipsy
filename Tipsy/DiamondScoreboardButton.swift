@@ -20,6 +20,6 @@ open class DiamondScoreboardButton: ScoreboardButton {
     }
     
     func setupService(){
-        self.shapeType = .diamond
+        self.shape = .diamond
     }
 }

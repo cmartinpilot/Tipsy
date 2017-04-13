@@ -20,23 +20,11 @@ enum ScoreboardButtonState{
 }
 
 @IBDesignable
-open class ScoreboardButton: UIView {
-    
-    open var shapeType:ShapeType = .circle {
-        didSet{
-            self.shape.shape = shapeType
-        }
-    }
-    
-    fileprivate var shapeColor:UIColor = UIColor.black{
-        didSet{
-            self.shape.color = shapeColor
-        }
-    }
+open class ScoreboardButton: ShapeView {
     
     @IBInspectable open var defaultShapeColor:UIColor = UIColor.black{
         didSet{
-            self.shapeColor = defaultShapeColor
+            self.color = defaultShapeColor
         }
     }
    
@@ -60,25 +48,24 @@ open class ScoreboardButton: UIView {
         didSet{
             switch state {
             case .unfilled:
-                self.shapeColor = self.defaultShapeColor
-                self.shape.drawWithStrokeOnly = true
-                self.shape.strokeWithDottedLine = true
+                self.color = self.defaultShapeColor
+                self.drawWithStrokeOnly = true
+                self.strokeWithDottedLine = true
             case .filled:
-                self.shape.drawWithStrokeOnly = false
-                self.shape.strokeWithDottedLine = false
+                self.drawWithStrokeOnly = false
+                self.strokeWithDottedLine = false
             case .multiplefilled:
                 print("yay")
                 //self.backgroundView.hidden = true
                 //self.shape.color = UIColor.blueColor()
             case .selected:
-                self.shape.drawWithStrokeOnly = false
-                self.shape.strokeWithDottedLine = false
+                self.drawWithStrokeOnly = false
+                self.strokeWithDottedLine = false
                 self.delegate?.scoreboardButtonWasSelected(self)
             }
         }
     }
     
-    fileprivate var shape:ShapeView = ShapeView(shape: .circle, color: UIColor.black)
     
     override public init(frame: CGRect) {
         super.init(frame: CGRect.zero)
@@ -91,13 +78,11 @@ open class ScoreboardButton: UIView {
     }
     
     func setup(){
-//        self.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.shape.color = self.defaultShapeColor
-        self.shape.shape = self.shapeType
-        self.shape.drawWithStrokeOnly = true
-        self.shape.strokeWithDottedLine = true
-        self.shape.drawWithStrokeAndFill = true
+        self.color = self.defaultShapeColor
+        self.shape = .circle
+        self.drawWithStrokeOnly = true
+        self.strokeWithDottedLine = true
+        self.drawWithStrokeAndFill = true
         
         //add gesture recognizer
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ScoreboardButton.tapped))
@@ -112,30 +97,24 @@ open class ScoreboardButton: UIView {
     }
     
     override open func layoutSubviews() {
-        self.addSubview(self.backgroundView)
-        self.backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(self.shape)
+        if self.contentView == nil{
+            self.contentView = self.backgroundView
+        }
         
         if self.contentView != nil{
-            self.shape.addSubview(self.contentView!)
+            self.addSubview(self.contentView!)
             self.contentView!.translatesAutoresizingMaskIntoConstraints = false
         }
         
         //add Constraints
-        self.shape.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.shape.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.shape.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        self.shape.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
-        self.backgroundView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.backgroundView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         if self.contentView != nil{
-            self.contentView?.centerXAnchor.constraint(equalTo: self.shape.centerXAnchor).isActive = true
-            self.contentView?.centerYAnchor.constraint(equalTo: self.shape.centerYAnchor).isActive = true
+            self.contentView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+            self.contentView?.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         }else{
-            self.contentView?.centerXAnchor.constraint(equalTo: self.shape.centerXAnchor).isActive = false
-            self.contentView?.centerYAnchor.constraint(equalTo: self.shape.centerYAnchor).isActive = false
+            self.contentView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = false
+            self.contentView?.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = false
         }
     }
     
@@ -143,7 +122,7 @@ open class ScoreboardButton: UIView {
         
         //If a color was passed, use it.  Otherwise, color remains same
         if let color = ofColor{
-            self.shapeColor = color
+            self.color = color
         }
         
         self.state = buttonState

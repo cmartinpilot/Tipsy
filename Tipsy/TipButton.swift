@@ -30,16 +30,11 @@ public enum ButtonDescription {
 }
 
 @IBDesignable
-open class TipButton: UIView {
+open class TipButton: ShapeView {
     
     ////Properties
-    let tipsyYellow:UIColor = UIColor(red: (252.0/255.0), green: (205/255.0), blue: (19/255.0), alpha: (1.0))
+    //let tipsyYellow:UIColor = UIColor(red: (252.0/255.0), green: (205/255.0), blue: (19/255.0), alpha: (1.0))
     
-    @IBInspectable open var shapeColor:UIColor = UIColor(red: (252.0/255.0), green: (205/255.0), blue: (19/255.0), alpha: (1.0)){ //Tipsy yellow
-        didSet{
-            self.backgroundShape.color = self.shapeColor
-        }
-    }
     
     open var buttonDescription:ButtonDescription{
         return .none
@@ -49,17 +44,14 @@ open class TipButton: UIView {
         didSet{
             switch self.state {
             case .selected:
-                self.backgroundShape.drawWithStrokeOnly = true
+                self.drawWithStrokeOnly = true
             case .deselected:
-                self.backgroundShape.drawWithStrokeOnly = false
+                self.drawWithStrokeOnly = false
             }
         }
     }
     
     open weak var delegate:TipButtonDelegate?
-    
-    open var backgroundShape:ShapeView = ShapeView(shape: .circle , color: UIColor(red: (252.0/255.0), green: (205/255.0), blue: (19/255.0), alpha: (1.0)))
-    
     
     open var contentView:UIView?{
         didSet{self.setNeedsLayout()}
@@ -73,8 +65,7 @@ open class TipButton: UIView {
         
         //init
         self.init(frame:CGRect.zero)
-        self.shapeColor = backgroundColor
-        self.backgroundShape.color = self.shapeColor
+        self.color = backgroundColor
         self.setup()
     }
     //DESIGNATED Initalizer - Also required for Interface Builder
@@ -115,19 +106,15 @@ open class TipButton: UIView {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        self.addSubview(self.backgroundShape)
         if self.contentView != nil{
-            self.backgroundShape.addSubview(contentView!)
+            self.addSubview(contentView!)
             self.contentView?.translatesAutoresizingMaskIntoConstraints = false
         }
         
         //add constraints
-        self.backgroundShape.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        self.backgroundShape.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        self.backgroundShape.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        self.backgroundShape.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+
         
-        self.contentView?.centerXAnchor.constraint(equalTo: self.backgroundShape.centerXAnchor).isActive = true
-        self.contentView?.centerYAnchor.constraint(equalTo: self.backgroundShape.centerYAnchor).isActive = true
+        self.contentView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        self.contentView?.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }

@@ -32,15 +32,14 @@ open class TextTipButton: TipButton {
     //Initalizers
     init(backgroundColor:UIColor, text:String?){
         super.init(frame: CGRect.zero)
-        self.shapeColor = backgroundColor
-        self.backgroundShape.color = self.shapeColor
+        self.color = backgroundColor
         self.label.attributedText = self.attributedText(self.text!, WithColor: UIColor.white, size: self.textSize)
         self.contentView = self.label
     }
     
     convenience init(backgroundColor:UIColor){
         self.init(backgroundColor:backgroundColor, text:nil)
-        self.backgroundShape.color = backgroundColor
+        self.color = backgroundColor
     }
     override public init(frame: CGRect) {
         super.init(frame: frame)

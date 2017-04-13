@@ -21,7 +21,7 @@ open class RectScoreboardButton: ScoreboardButton {
     }
     
     func setupService(){
-        self.shapeType = .roundedRect
+        self.shape = .roundedRect
     }
     
 }

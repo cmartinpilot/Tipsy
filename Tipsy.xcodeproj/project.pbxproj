@@ -28,6 +28,7 @@
 		301856261E995ADD00F961EF /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856211E995ADD00F961EF /* ShapeView.swift */; };
 		301856271E995ADD00F961EF /* TipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856221E995ADD00F961EF /* TipButton.swift */; };
 		301856291E995B2000F961EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301856281E995B2000F961EF /* Main.storyboard */; };
+		30F2C0411E9F1DA000B14818 /* Antipasto_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 300DA7B11E99CEE20063C8BA /* Antipasto_regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F2C0411E9F1DA000B14818 /* Antipasto_regular.otf in Resources */,
 				301856291E995B2000F961EF /* Main.storyboard in Resources */,
 				300DA7991E995BDA0063C8BA /* Assets.xcassets in Resources */,
 				301856171E994B9E00F961EF /* LaunchScreen.storyboard in Resources */,

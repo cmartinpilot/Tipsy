@@ -9,6 +9,13 @@
 import UIKit
 import QuartzCore
 
+protocol drawsItself {
+    var drawWithStrokeOnly: Bool {get set}
+    var strokeWithDottedLine: Bool {get set}
+    var drawWithStrokeAndFill: Bool {get set}
+}
+
+
 public enum ShapeType {
     case circle
     case roundedRect
@@ -16,8 +23,8 @@ public enum ShapeType {
 }
 
 @IBDesignable
-open class ShapeView: UIView {
-    @IBInspectable open var color:UIColor = UIColor.black {
+open class ShapeView: UIView, drawsItself {
+    @IBInspectable open var color:UIColor = UIColor.brown {
         didSet{
             self.setNeedsDisplay()}
     }
@@ -56,9 +63,9 @@ open class ShapeView: UIView {
         self.backgroundColor = UIColor.clear
     }
     
-    override fileprivate init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        //self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     required public init?(coder aDecoder: NSCoder) {
