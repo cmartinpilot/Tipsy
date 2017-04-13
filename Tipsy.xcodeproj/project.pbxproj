@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				301856211E995ADD00F961EF /* ShapeView.swift */,
-				300DA7B31E99D05B0063C8BA /* Scoreboard Buttons */,
 				300DA7B21E99D0320063C8BA /* Field Buttons */,
+				300DA7B31E99D05B0063C8BA /* Scoreboard Buttons */,
 				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
 				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
 				301856091E994B9E00F961EF /* AppDelegate.swift */,

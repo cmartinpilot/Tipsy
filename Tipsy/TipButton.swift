@@ -90,8 +90,6 @@ open class TipButton: UIView {
 
     
     func setup(){
-        //self.translatesAutoresizingMaskIntoConstraints = false
-
         //add gesture recognizer
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(TipButton.tapped))
         
