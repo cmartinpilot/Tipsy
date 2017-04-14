@@ -29,7 +29,7 @@ open class ShapeView: UIView, drawsItself {
             self.setNeedsDisplay()}
     }
     
-    @IBInspectable open var drawWithStrokeOnly:Bool = false{
+    open var drawWithStrokeOnly:Bool = false{
         didSet{
             self.setNeedsDisplay()
         }
@@ -41,13 +41,13 @@ open class ShapeView: UIView, drawsItself {
         }
     }
     
-    @IBInspectable open var strokeWithDottedLine:Bool = false{
+    open var strokeWithDottedLine:Bool = false{
         didSet{
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable open var drawWithStrokeAndFill:Bool = false{
+    open var drawWithStrokeAndFill:Bool = false{
         didSet{
             self.setNeedsDisplay()
         }

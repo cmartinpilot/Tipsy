@@ -22,11 +22,6 @@ enum ScoreboardButtonState{
 @IBDesignable
 open class ScoreboardButton: ShapeView {
     
-    @IBInspectable open var defaultShapeColor:UIColor = UIColor.black{
-        didSet{
-            self.color = defaultShapeColor
-        }
-    }
    
     @IBInspectable open var backgroundViewImage:UIImage? = nil{
         didSet{
@@ -48,7 +43,7 @@ open class ScoreboardButton: ShapeView {
         didSet{
             switch state {
             case .unfilled:
-                self.color = self.defaultShapeColor
+                //self.color = self.defaultShapeColor
                 self.drawWithStrokeOnly = true
                 self.strokeWithDottedLine = true
             case .filled:
@@ -78,7 +73,7 @@ open class ScoreboardButton: ShapeView {
     }
     
     func setup(){
-        self.color = self.defaultShapeColor
+        //self.color = self.defaultShapeColor
         self.shape = .circle
         self.drawWithStrokeOnly = true
         self.strokeWithDottedLine = true
