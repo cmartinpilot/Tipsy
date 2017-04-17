@@ -71,6 +71,8 @@ class ViewController: UIViewController{
         //
         
         
+        
+        
         //Scoreboard and button delegate assignment
         
         self.buttonManager.delegate = scoreboardManager

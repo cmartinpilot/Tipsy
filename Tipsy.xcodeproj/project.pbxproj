@@ -28,6 +28,8 @@
 		301856261E995ADD00F961EF /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856211E995ADD00F961EF /* ShapeView.swift */; };
 		301856271E995ADD00F961EF /* TipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301856221E995ADD00F961EF /* TipButton.swift */; };
 		301856291E995B2000F961EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301856281E995B2000F961EF /* Main.storyboard */; };
+		30B4FF201EA1AC5400208C73 /* Airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B4FF1E1EA1AC5400208C73 /* Airports.swift */; };
+		30B4FF211EA1AC5400208C73 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B4FF1F1EA1AC5400208C73 /* airports.json */; };
 		30F2C0411E9F1DA000B14818 /* Antipasto_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 300DA7B11E99CEE20063C8BA /* Antipasto_regular.otf */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		301856211E995ADD00F961EF /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		301856221E995ADD00F961EF /* TipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipButton.swift; sourceTree = "<group>"; };
 		301856281E995B2000F961EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		30B4FF1E1EA1AC5400208C73 /* Airports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airports.swift; sourceTree = "<group>"; };
+		30B4FF1F1EA1AC5400208C73 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,10 @@
 			isa = PBXGroup;
 			children = (
 				301856211E995ADD00F961EF /* ShapeView.swift */,
+				30B4FF221EA1AC6300208C73 /* Airport */,
 				300DA7B21E99D0320063C8BA /* Field Buttons */,
 				300DA7B31E99D05B0063C8BA /* Scoreboard Buttons */,
-				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
-				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
+				302C1B831EA16B4800923FDD /* Managers */,
 				301856091E994B9E00F961EF /* AppDelegate.swift */,
 				300DA79A1E995BF90063C8BA /* ViewController.swift */,
 				301856281E995B2000F961EF /* Main.storyboard */,
@@ -129,6 +133,24 @@
 				300DA7B11E99CEE20063C8BA /* Antipasto_regular.otf */,
 			);
 			path = Tipsy;
+			sourceTree = "<group>";
+		};
+		302C1B831EA16B4800923FDD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3018561E1E995ADD00F961EF /* ButtonManager.swift */,
+				301856201E995ADD00F961EF /* ScoreboardManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		30B4FF221EA1AC6300208C73 /* Airport */ = {
+			isa = PBXGroup;
+			children = (
+				30B4FF1E1EA1AC5400208C73 /* Airports.swift */,
+				30B4FF1F1EA1AC5400208C73 /* airports.json */,
+			);
+			name = Airport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +218,7 @@
 				301856291E995B2000F961EF /* Main.storyboard in Resources */,
 				300DA7991E995BDA0063C8BA /* Assets.xcassets in Resources */,
 				301856171E994B9E00F961EF /* LaunchScreen.storyboard in Resources */,
+				30B4FF211EA1AC5400208C73 /* airports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +242,7 @@
 				3018560A1E994B9E00F961EF /* AppDelegate.swift in Sources */,
 				300DA79F1E99CCFA0063C8BA /* ServiceTipButton.swift in Sources */,
 				300DA7A41E99CD970063C8BA /* RectTextTipButton.swift in Sources */,
+				30B4FF201EA1AC5400208C73 /* Airports.swift in Sources */,
 				301856121E994B9E00F961EF /* Tipsy.xcdatamodeld in Sources */,
 				300DA7A01E99CCFA0063C8BA /* TextTipButton.swift in Sources */,
 				301856241E995ADD00F961EF /* ScoreboardButton.swift in Sources */,

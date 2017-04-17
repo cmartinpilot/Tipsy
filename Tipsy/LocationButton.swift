@@ -13,4 +13,6 @@ open class LocationButton: RectTextTipButton {
     open override var buttonDescription: ButtonDescription{
         return .location
     }
+    
+    open let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class TextTipButton: TipButton {
+open class TextTipButton: TipButton, AttributeTextable {
     
 //    Properties
     @IBInspectable open var text:String?{
@@ -51,11 +51,6 @@ open class TextTipButton: TipButton {
     
     //Helper function
     
-    func attributedText(_ text: String, WithColor color:UIColor, size:CGFloat) -> NSAttributedString {
-        let font = UIFont(name: "Antipasto", size: size)
-        let attributes = [NSFontAttributeName:font!,NSForegroundColorAttributeName:color]
-        let attributedAmount = NSAttributedString(string: text, attributes: attributes)
-        return attributedAmount
-    }
+
 
 }

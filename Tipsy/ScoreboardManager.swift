@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate{
+open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate, AttributeTextable{
 
     static let sharedScoreboardManager:ScoreboardManager = ScoreboardManager()
     
@@ -86,7 +86,7 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate{
     
     
     open func scoreboardButtonWasSelected(_ button:ScoreboardButton){
-        
+        print("scoreboardButtonWasSelected")
     }
     
     
@@ -181,15 +181,4 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate{
         }
         return serviceView
     }
-
-    //Helper function
-    func attributedText(_ text: String, WithColor color:UIColor, size:CGFloat) -> NSAttributedString {
-        let font = UIFont(name: "Antipasto", size: size)
-        let attributes = [NSFontAttributeName:font!,NSForegroundColorAttributeName:color]
-        let attributedText = NSAttributedString(string: text, attributes: attributes)
-        return attributedText
-    }
-    
-    
-    
 }

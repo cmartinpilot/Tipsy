@@ -43,7 +43,6 @@ open class ScoreboardButton: ShapeView {
         didSet{
             switch state {
             case .unfilled:
-                //self.color = self.defaultShapeColor
                 self.drawWithStrokeOnly = true
                 self.strokeWithDottedLine = true
             case .filled:
@@ -51,8 +50,6 @@ open class ScoreboardButton: ShapeView {
                 self.strokeWithDottedLine = false
             case .multiplefilled:
                 print("yay")
-                //self.backgroundView.hidden = true
-                //self.shape.color = UIColor.blueColor()
             case .selected:
                 self.drawWithStrokeOnly = false
                 self.strokeWithDottedLine = false
@@ -73,7 +70,6 @@ open class ScoreboardButton: ShapeView {
     }
     
     func setup(){
-        //self.color = self.defaultShapeColor
         self.shape = .circle
         self.drawWithStrokeOnly = true
         self.strokeWithDottedLine = true
@@ -89,6 +85,7 @@ open class ScoreboardButton: ShapeView {
     func tapped(){
         print("Scoreboard Button tapped")
         self.state = .selected
+        self.delegate?.scoreboardButtonWasSelected(self)
     }
     
     override open func layoutSubviews() {

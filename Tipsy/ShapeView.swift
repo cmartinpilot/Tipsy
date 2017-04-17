@@ -9,10 +9,16 @@
 import UIKit
 import QuartzCore
 
-protocol drawsItself {
-    var drawWithStrokeOnly: Bool {get set}
-    var strokeWithDottedLine: Bool {get set}
-    var drawWithStrokeAndFill: Bool {get set}
+
+protocol AttributeTextable {}
+extension AttributeTextable {
+    
+    func attributedText(_ text: String, WithColor color:UIColor, size:CGFloat) -> NSAttributedString {
+        let font = UIFont(name: "Antipasto", size: size)
+        let attributes = [NSFontAttributeName:font!,NSForegroundColorAttributeName:color]
+        let attributedAmount = NSAttributedString(string: text, attributes: attributes)
+        return attributedAmount
+    }
 }
 
 
@@ -23,7 +29,7 @@ public enum ShapeType {
 }
 
 @IBDesignable
-open class ShapeView: UIView, drawsItself {
+open class ShapeView: UIView {
     @IBInspectable open var color:UIColor = UIColor.brown {
         didSet{
             self.setNeedsDisplay()}
