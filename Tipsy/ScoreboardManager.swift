@@ -98,7 +98,7 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate, At
         if size != nil{
             styledText = self.attributedText(text, WithColor: UIColor.white, size: size!)
         }else{
-            styledText = self.attributedText(text, WithColor: UIColor.white, size: 24.0)
+            styledText = self.attributedText(text, WithColor: UIColor.white, size: 18.0)
         }
         
         label.attributedText = styledText

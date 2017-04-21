@@ -8,11 +8,32 @@
 
 import UIKit
 
-open class LocationButton: RectTextTipButton {
+protocol DisplaysActivityIndicator {
+    var activityIndicator:UIActivityIndicatorView {get}
+    func startActivityAnimation()
+    func endActivityAnimation()
+}
+
+open class LocationButton: RectTextTipButton, DisplaysActivityIndicator {
 
     open override var buttonDescription: ButtonDescription{
         return .location
     }
     
     open let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .white)
+    
+    func startActivityAnimation(){
+       
+        self.contentView = self.activityIndicator
+        self.activityIndicator.startAnimating()
+    }
+    
+    func endActivityAnimation() {
+        
+        if self.activityIndicator.isAnimating{self.activityIndicator.stopAnimating()}
+        if let animatingIndicator = self.contentView{
+            animatingIndicator.removeFromSuperview()
+        }
+        
+    }
 }

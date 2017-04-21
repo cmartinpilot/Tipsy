@@ -7,9 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, CLLocationManagerDelegate{
 
+    
+    var locationManager:CLLocationManager? = nil
+    var nearbyAirports:[Airport] = []{
+        didSet{
+            self.locationButton1.endActivityAnimation()
+            print(nearbyAirports.count)
+            if nearbyAirports.count > 0{
+                self.locationButton1.text = nearbyAirports[0].icao
+            }
+            
+        }
+    }
 
     //Scoreboard outlets
 
@@ -43,7 +56,9 @@ class ViewController: UIViewController{
     
     @IBOutlet var tailButtons: [TailButton]!
    
+//    Location Tip Button outlets
     
+    @IBOutlet weak var locationButton1: LocationButton!
     
     let buttonManager = ButtonManager.sharedButtonManager
     let scoreboardManager = ScoreboardManager.sharedScoreboardManager
@@ -70,7 +85,12 @@ class ViewController: UIViewController{
         self.navigationItem.titleView = titleImageView
         //
         
+        //Location Services
         
+        if self.isLocationServicesEnabledAndAuthorized() {
+            self.locationButton1.startActivityAnimation()
+            self.locationManager!.requestLocation()
+        }
         
         
         //Scoreboard and button delegate assignment
@@ -111,6 +131,51 @@ class ViewController: UIViewController{
             button.delegate = buttonManager
         }
 
+        //Location buttons delegate assignment
+        self.locationButton1.delegate           = buttonManager
     }
+    
+    func isLocationServicesEnabledAndAuthorized() -> Bool{
+        guard CLLocationManager.locationServicesEnabled() else {return false}
+            
+            
+        let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
+        
+        self.locationManager = CLLocationManager()
+        
+        locationManager!.delegate = self
+        
+        switch status {
+        case .notDetermined:
+            self.locationManager!.requestWhenInUseAuthorization()
+        case .restricted:
+            NSLog("Restricted")
+            return false
+        case .denied:
+            NSLog("Denied")
+            return false
+        case .authorizedAlways:
+            NSLog("AuthorizedAlways")
+            return true
+        case .authorizedWhenInUse:
+            NSLog("AuthorizedWhenInUse")
+            return true
+        }
+        return false
+    }
+        
+    
+    //CLLocationManagerDelegate functions
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("didFailWithError: Could not find location")
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        Airports.findNear(location: locations[0]){ airports in
+            self.nearbyAirports = airports
+        }
+    }
+    
+    
 }
 
