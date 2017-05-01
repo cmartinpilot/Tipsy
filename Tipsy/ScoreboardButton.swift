@@ -33,13 +33,13 @@ open class ScoreboardButton: ShapeView {
     
     fileprivate var backgroundView:UIImageView = UIImageView()
     
-    fileprivate var contentView:UIView?{
+    var contentView:UIView?{
         didSet{self.setNeedsLayout()}
     }
     
 
     
-    fileprivate var state:ScoreboardButtonState = .unfilled{
+    var state:ScoreboardButtonState = .unfilled{
         didSet{
             switch state {
             case .unfilled:

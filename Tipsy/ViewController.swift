@@ -15,10 +15,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     var locationManager:CLLocationManager? = nil
     var nearbyAirports:[Airport] = []{
         didSet{
-            self.locationButton1.endActivityAnimation()
+            for button in locationButtons {
+                button.endActivityAnimation()
+            }
             print(nearbyAirports.count)
             if nearbyAirports.count > 0{
-                self.locationButton1.text = nearbyAirports[0].icao
+                var iteration = 0
+                for button in locationButtons {
+                    button.text = nearbyAirports[iteration].icao
+                    iteration += 1
+                }
+                
             }
             
         }
@@ -58,7 +65,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
    
 //    Location Tip Button outlets
     
-    @IBOutlet weak var locationButton1: LocationButton!
+    @IBOutlet var locationButtons: [LocationButton]!
+
     
     let buttonManager = ButtonManager.sharedButtonManager
     let scoreboardManager = ScoreboardManager.sharedScoreboardManager
@@ -88,7 +96,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         //Location Services
         
         if self.isLocationServicesEnabledAndAuthorized() {
-            self.locationButton1.startActivityAnimation()
+            for button in locationButtons {
+                button.startActivityAnimation()
+            }
             self.locationManager!.requestLocation()
         }
         
@@ -132,7 +142,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         }
 
         //Location buttons delegate assignment
-        self.locationButton1.delegate           = buttonManager
+        for button in self.locationButtons {
+            button.delegate = buttonManager
+        }
+        
     }
     
     func isLocationServicesEnabledAndAuthorized() -> Bool{

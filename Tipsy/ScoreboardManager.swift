@@ -51,7 +51,7 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate, At
         case true:
             var view:UILabel? = nil
             if let text = status.tailText {
-                view = self.labelForButtonTurnedOnWith(text, size: 20.0)
+                view = self.labelForButtonTurnedOnWith(text, size: 19.0)
             }
             self.tail?.changeStateTo(.filled, ofColor: status.tailButtonColor, withView: view)
         case false:
@@ -63,7 +63,7 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate, At
         case true:
             var view:UILabel? = nil
             if let text = status.locationText{
-                view = self.labelForButtonTurnedOnWith(text, size: nil)
+                view = self.labelForButtonTurnedOnWith(text, size: 18.0)
             }
             self.location?.changeStateTo(.filled, ofColor: status.locationButtonColor, withView: view)
         case false:
@@ -98,7 +98,7 @@ open class ScoreboardManager:ButtonManagerDelegate, ScoreboardButtonDelegate, At
         if size != nil{
             styledText = self.attributedText(text, WithColor: UIColor.white, size: size!)
         }else{
-            styledText = self.attributedText(text, WithColor: UIColor.white, size: 18.0)
+            styledText = self.attributedText(text, WithColor: UIColor.white, size: 20.0)
         }
         
         label.attributedText = styledText
